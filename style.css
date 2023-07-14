@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f2f7fd;
 }
 
 header {
@@ -45,7 +46,7 @@ section {
 }
 
 #search-history {
-    position: absolute;
+    position: fixed;
     top: 130px;
     left: 20px;
 }
@@ -55,4 +56,43 @@ section {
     margin-bottom: 10px;
 }
 
-/* Add more styles as needed */
+.forecast-item {
+    display: inline-block;
+    width: calc(20% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #2f6baf;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.forecast-item:last-child {
+    margin-right: 0;
+}
+
+.current-day {
+    background-color: #eaf6ff;
+    border: 1px solid #1e90ff;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #search-history {
+        position: static;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .forecast-item {
+        flex: 0 0 45%;
+        margin-right: 10px;
+    }
+}
