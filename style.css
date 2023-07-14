@@ -49,7 +49,10 @@ section {
     position: fixed;
     top: 130px;
     left: 20px;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
 #search-history button {
     display: block;
