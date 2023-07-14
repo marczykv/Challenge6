@@ -160,13 +160,13 @@ function addToSearchHistory(city) {
 // Render search history
 function renderSearchHistory() {
     searchHistorySection.innerHTML = '';
-
-    searchHistory.forEach(city => {
-        const button = document.createElement('button');
-        button.textContent = city;
-        searchHistorySection.appendChild(button);
+  
+    searchHistory.forEach((city) => {
+      const button = document.createElement('button');
+      button.textContent = city;
+      searchHistorySection.appendChild(button);
     });
-}
+  }
 
 // Handle click on search history
 function handleSearchHistoryClick(event) {
