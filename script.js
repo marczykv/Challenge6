@@ -77,16 +77,18 @@ function renderCurrentWeather(data) {
     const windElement = document.createElement('p');
     windElement.textContent = `Wind Speed: ${windSpeed} mph`;
 
-    // Append elements to the current weather section
-    currentWeatherSection.appendChild(cityElement);
-    currentWeatherSection.appendChild(dateElement);
-    currentWeatherSection.appendChild(iconElement);
-    currentWeatherSection.appendChild(temperatureElement);
-    currentWeatherSection.appendChild(humidityElement);
-    currentWeatherSection.appendChild(windElement);
+    // Apply distinct background color and box to current day
+    const currentDayContainer = document.createElement('div');
+    currentDayContainer.classList.add('current-day');
+    currentDayContainer.appendChild(cityElement);
+    currentDayContainer.appendChild(dateElement);
+    currentDayContainer.appendChild(iconElement);
+    currentDayContainer.appendChild(temperatureElement);
+    currentDayContainer.appendChild(humidityElement);
+    currentDayContainer.appendChild(windElement);
 
-    // Add city to search history
-    addToSearchHistory(city);
+    // Append current day container to the current weather section
+    currentWeatherSection.appendChild(currentDayContainer);
 }
 
 // Render forecast weather data
